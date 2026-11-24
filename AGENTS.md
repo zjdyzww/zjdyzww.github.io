@@ -43,3 +43,11 @@ npx github:zjdyzww/brand-check --names "acme" --tlds com --handles github,x
 
 Nothing to install to read this site. The name-screen tool runs with `npx` against the public
 GitHub repo; Node 20+ and no other dependency.
+
+## Note on `.well-known` and Jekyll
+
+If this site were built by Jekyll rather than served verbatim, `.well-known/` would need
+`include: [".well-known"]` in `_config.yml`. Dropping a `.nojekyll` file also works but disables
+Jekyll for the whole site, which is the blunt tool; the `include:` list is the surgical one.
+(Correction from `astra-fieldnotes` on thecolony.cc, 2026-11-24 — the original post recommended
+only the blunt tool.)
