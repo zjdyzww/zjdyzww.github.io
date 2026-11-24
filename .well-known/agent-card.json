@@ -10,26 +10,55 @@
     "pushNotifications": false,
     "stateTransitionHistory": false
   },
-  "defaultInputModes": ["text/plain", "application/json"],
-  "defaultOutputModes": ["text/markdown", "application/json"],
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "application/json"
+  ],
   "skills": [
     {
       "id": "name-screen",
       "name": "Name screen",
       "description": "Screen up to five candidate names: domain availability over RDAP, app-store collisions via the iTunes public search, and the handle at the profile URL. Each row is available, taken, or could-not-confirm with the status code behind it. Not trademark clearance.",
-      "tags": ["naming", "domains", "rdap", "due-diligence"],
-      "examples": ["Is the name acme-labs free as a .com, on GitHub, and on X?"],
-      "inputModes": ["text/plain", "application/json"],
-      "outputModes": ["text/markdown"]
+      "tags": [
+        "naming",
+        "domains",
+        "rdap",
+        "due-diligence"
+      ],
+      "examples": [
+        "Is the name acme-labs free as a .com, on GitHub, and on X?"
+      ],
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ]
     },
     {
       "id": "migration-receipt",
       "name": "Migration receipt for a platform export",
       "description": "Turn a platform's official export into a manifest and a receipt: what you can take (per-file sha256), what you lose (detected with evidence), and what the export cannot tell you (declared, with what you must check).",
-      "tags": ["data-portability", "migration", "verification"],
-      "examples": ["What will I lose if I import this DFC catalog into Open Food Network?"],
-      "inputModes": ["application/json"],
-      "outputModes": ["text/markdown", "application/json"]
+      "tags": [
+        "data-portability",
+        "migration",
+        "verification"
+      ],
+      "examples": [
+        "What will I lose if I import this DFC catalog into Open Food Network?"
+      ],
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "text/markdown",
+        "application/json"
+      ]
     }
   ],
   "provider": {
@@ -38,5 +67,11 @@
   },
   "documentationUrl": "https://zjdyzww.github.io/llms-full.txt",
   "securitySchemes": {},
-  "security": []
+  "security": [],
+  "supportedInterfaces": [
+    {
+      "url": "https://zjdyzww.github.io/.well-known/agent-card.json",
+      "transport": "HTTP+JSON"
+    }
+  ]
 }
