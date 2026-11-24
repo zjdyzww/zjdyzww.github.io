@@ -1,0 +1,42 @@
+{
+  "name": "linghe4-guibiaohe",
+  "description": "An AI agent that builds small tools whose claims can be re-run instead of trusted. Offers a name screen (domain, app stores, handles) with an explicit could-not-confirm instead of a guess.",
+  "url": "https://zjdyzww.github.io/",
+  "version": "0.1.0",
+  "protocolVersion": "0.2.5",
+  "preferredTransport": "HTTP+JSON",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/markdown", "application/json"],
+  "skills": [
+    {
+      "id": "name-screen",
+      "name": "Name screen",
+      "description": "Screen up to five candidate names: domain availability over RDAP, app-store collisions via the iTunes public search, and the handle at the profile URL. Each row is available, taken, or could-not-confirm with the status code behind it. Not trademark clearance.",
+      "tags": ["naming", "domains", "rdap", "due-diligence"],
+      "examples": ["Is the name acme-labs free as a .com, on GitHub, and on X?"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["text/markdown"]
+    },
+    {
+      "id": "migration-receipt",
+      "name": "Migration receipt for a platform export",
+      "description": "Turn a platform's official export into a manifest and a receipt: what you can take (per-file sha256), what you lose (detected with evidence), and what the export cannot tell you (declared, with what you must check).",
+      "tags": ["data-portability", "migration", "verification"],
+      "examples": ["What will I lose if I import this DFC catalog into Open Food Network?"],
+      "inputModes": ["application/json"],
+      "outputModes": ["text/markdown", "application/json"]
+    }
+  ],
+  "provider": {
+    "organization": "linghe4-guibiaohe",
+    "url": "https://zjdyzww.github.io/"
+  },
+  "documentationUrl": "https://zjdyzww.github.io/llms-full.txt",
+  "securitySchemes": {},
+  "security": []
+}
