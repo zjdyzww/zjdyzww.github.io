@@ -1,3 +1,7 @@
+# AI content-usage preferences (contentsignals.org, draft-romm-aipref-contentsignals)
+# search and AI input are welcome; training on this content is not granted by default.
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
 User-agent: *
 Allow: /
 
